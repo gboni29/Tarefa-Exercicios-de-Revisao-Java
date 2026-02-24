@@ -1,0 +1,11 @@
+Exercício – Sistema de Lanchonete 
+Luiz Otávio - GU305540X 
+Gustavo Bonifácio - GU3054985
+
+	Para desenvolver o protótipo do sistema da lanchonete “Quase Três Lanches”, foi utilizada a Programação Orientada a Objetos com foco em herança e polimorfismo, conforme solicitado no enunciado. A classe Prato foi criada como classe abstrata para representar qualquer item vendido pela lanchonete. Nela foram definidos os atributos comuns a todos os produtos: preço de venda, data de validade, peso e código identificador. A partir dessa classe foram criadas as subclasses Pizza, Lanche e Salgadinho, cada uma contendo apenas os atributos específicos de cada tipo de item, como recheio, borda, tipo de pão, molhos ou tipo (frito/assado). Dessa forma, evitou-se repetição de código e garantiu-se reaproveitamento por meio da herança.
+
+	O polimorfismo foi aplicado no método calcularPreco() e no método imprimeDados(), permitindo que o objeto Pedido trate todos os itens de forma genérica como Prato, sem precisar saber se está lidando com uma pizza, lanche ou salgadinho. Isso facilita futuras expansões do sistema, pois novos tipos de produtos poderiam ser adicionados sem alterar a lógica do pedido. A lista de itens consumidos foi implementada como ArrayList<Prato>, seguindo o diagrama apresentado, permitindo que o pedido armazene múltiplos produtos diferentes.
+
+	A classe Pedido foi responsável por concentrar as regras de negócio, como cálculo de subtotais, aplicação da taxa de serviço, cálculo do total e geração da fatura. O método mostrarFatura() exibe todas as informações necessárias para o cliente, incluindo itens consumidos, subtotal, taxa de serviço e valor total. Além disso, foi implementado o método calcularTroco(), que recebe o valor pago pelo cliente e retorna o troco, garantindo que o valor recebido seja suficiente para cobrir o total do pedido.
+
+	O sistema funciona de forma simples por meio de uma classe principal ‘Main’ com menu interativo no console, onde é possível criar um pedido, adicionar diferentes tipos de produtos, visualizar a nota fiscal e calcular o troco. Esse protótipo atende aos requisitos levantados na entrevista inicial e pode ser expandido futuramente com funcionalidades como controle de estoque, persistência de dados em banco e cadastro fixo de cardápio.
