@@ -1,0 +1,12 @@
+Exercício – Escritório de Investimentos VcRiquinho 
+Luiz Otávio - GU305540X 
+Gustavo Bonifácio - GU3054985
+
+	Para o desenvolvimento do protótipo da VcRiquinho, a modelagem foi estruturada com base nos princípios da Programação Orientada a Objetos, principalmente encapsulamento, herança e polimorfismo. A criação de classes abstratas como Conta e Produto foi uma decisão importante para organizar a hierarquia do sistema. Essas classes concentram os atributos e comportamentos comuns, enquanto as subclasses implementam regras específicas de rendimento e cálculo, evitando repetição de código e facilitando futuras expansões.
+
+	A separação entre Cliente, PessoaFisica e PessoaJuridica foi feita utilizando herança para representar corretamente os dois tipos de clientes exigidos no enunciado. Isso permite que o sistema trate clientes de forma genérica quando necessário, mas aplique regras específicas, como diferentes taxas de serviço na conta de investimento automático, de maneira clara e organizada. Essa estrutura facilita a manutenção e a implementação de novas regras de negócio no futuro.
+
+	O uso de polimorfismo foi essencial para o cálculo de rendimento das contas. O método calcularRendimento() foi definido na classe abstrata Conta e implementado de forma diferente em cada tipo de conta, respeitando as regras descritas no enunciado (como taxa fixa de 0,07% no CDI e taxas diferentes para PF e PJ na conta de investimento automático). Isso permite que o simulador trate qualquer conta de forma uniforme, sem precisar utilizar estruturas condicionais complexas para verificar o tipo de conta.
+
+	Além disso, a criação de classes auxiliares como SimulacaoContexto e SimulacaoResultado ajudou a separar responsabilidades, organizando melhor o fluxo de dados da simulação. Essa divisão torna o código mais legível, mais modular e mais próximo de uma arquitetura real de mercado. O protótipo foi pensado para ser facilmente evoluído, permitindo a inclusão futura de novos tipos de produtos, novas regras de taxa ou até integração com banco de dados, sem necessidade de reestruturação completa do sistema.
+
